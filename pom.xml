@@ -29,6 +29,7 @@
     <module>sample-war-packaging</module>
     <module>sample-file-manager</module>
     <module>sample-scheduler</module>
+    <module>sample-websocket</module>
     <module>sample-complete</module>
   </modules>
 
