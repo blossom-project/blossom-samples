@@ -3,5 +3,5 @@
 <#import "/blossom/utils/table.ftl" as table>
 
 <@master.default currentUser=currentUser>
-  POUET !!
+POUET !!
 </@master.default>

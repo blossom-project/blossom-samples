@@ -1,0 +1,72 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet id="blossom_core_test_maels_create_table" author="entity-generator">
+
+    <createTable tableName="test_mael">
+      <column name="id" type="bigint">
+        <constraints primaryKey="true" nullable="false" unique="true"/>
+      </column>
+
+      <column name="name" type="varchar(50)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="description" type="clob">
+        <constraints nullable="false"/>
+      </column>
+      <column name="test" type="varchar(10)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="date" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="time" type="time">
+        <constraints nullable="false"/>
+      </column>
+      <column name="timestamp" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+      <column name="timestamp_as_timestamp" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+      <column name="bool" type="boolean">
+        <constraints nullable="false"/>
+      </column>
+      <column name="integer" type="integer">
+        <constraints nullable="false"/>
+      </column>
+      <column name="_long" type="long">
+        <constraints nullable="false"/>
+      </column>
+      <column name="blob" type="longblob">
+        <constraints nullable="false"/>
+      </column>
+      <column name="blobl2" type="blob">
+        <constraints nullable="false"/>
+      </column>
+      <column name="bigdecimal" type="decimal(15,6)">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="creation_date" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="creation_user" type="varchar(25)">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="modification_date" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="modification_user" type="varchar(25)">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>

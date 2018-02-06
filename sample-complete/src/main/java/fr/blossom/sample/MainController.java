@@ -24,44 +24,46 @@ import java.util.Random;
 @Controller
 @RequestMapping
 public class MainController {
-    @Autowired
-    private Random random;
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private RoleService roleService;
-    @Autowired
-    private GroupService groupService;
 
-    @GetMapping
-    public String home(Model model, HttpServletResponse response) throws InterruptedException {
-        long sleep = (long) (random.nextGaussian() * 1000f);
-        if (sleep > 0)
-            Thread.sleep(sleep);
+  @Autowired
+  private Random random;
+  @Autowired
+  private UserService userService;
+  @Autowired
+  private RoleService roleService;
+  @Autowired
+  private GroupService groupService;
 
-        if (random.nextDouble() > 0.8d) {
-            response.setStatus(HttpStatus.values()[random.nextInt(HttpStatus.values().length)].value());
-        }
-
-        model.addAttribute("users", userService.getAll());
-        return "home";
+  @GetMapping
+  public String home(Model model, HttpServletResponse response) throws InterruptedException {
+    long sleep = (long) (random.nextGaussian() * 1000f);
+    if (sleep > 0) {
+      Thread.sleep(sleep);
     }
 
-    @GetMapping("/users")
-    @ResponseBody
-    public List<UserDTO> users() {
-        return userService.getAll();
+    if (random.nextDouble() > 0.8d) {
+      response.setStatus(HttpStatus.values()[random.nextInt(HttpStatus.values().length)].value());
     }
 
-    @GetMapping("/roles")
-    @ResponseBody
-    public List<RoleDTO> roles() {
-        throw new RuntimeException("mael test");
-    }
+    model.addAttribute("users", userService.getAll());
+    return "home";
+  }
 
-    @GetMapping("/groups")
-    @ResponseBody
-    public List<GroupDTO> groups() {
-        return groupService.getAll();
-    }
+  @GetMapping("/users")
+  @ResponseBody
+  public List<UserDTO> users() {
+    return userService.getAll();
+  }
+
+  @GetMapping("/roles")
+  @ResponseBody
+  public List<RoleDTO> roles() {
+    throw new RuntimeException("mael test");
+  }
+
+  @GetMapping("/groups")
+  @ResponseBody
+  public List<GroupDTO> groups() {
+    return groupService.getAll();
+  }
 }

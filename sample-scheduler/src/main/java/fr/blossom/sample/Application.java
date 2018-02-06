@@ -15,10 +15,9 @@ import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 public class Application {
 
 
-    public final static void main(String... args) {
-        SpringApplication.run(Application.class, args);
-    }
-
+  public final static void main(String... args) {
+    SpringApplication.run(Application.class, args);
+  }
 
 
   @Bean
@@ -34,7 +33,8 @@ public class Application {
   }
 
   @Bean
-  public CronTriggerFactoryBean sampleJobSimpleTrigger(@Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
+  public CronTriggerFactoryBean sampleJobSimpleTrigger(
+    @Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
     CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
     factoryBean.setName("Simple trigger");
     factoryBean.setDescription("This is a simple trigger for demonstration purpose");
@@ -46,7 +46,8 @@ public class Application {
   }
 
   @Bean
-  public SimpleTriggerFactoryBean sampleJobCronTrigger(@Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
+  public SimpleTriggerFactoryBean sampleJobCronTrigger(
+    @Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
     SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
     factoryBean.setName("Cron trigger");
     factoryBean.setDescription("This is a cron trigger for demonstration purpose");
@@ -54,7 +55,8 @@ public class Application {
     factoryBean.setStartDelay((long) 30 * 1000);
     factoryBean.setRepeatInterval(1 * 60 * 60 * 1000);
     factoryBean.setRepeatCount(SimpleTrigger.REPEAT_INDEFINITELY);
-    factoryBean.setMisfireInstruction(SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT);
+    factoryBean.setMisfireInstruction(
+      SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT);
     return factoryBean;
   }
 

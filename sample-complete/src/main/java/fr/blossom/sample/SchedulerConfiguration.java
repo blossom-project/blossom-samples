@@ -29,7 +29,8 @@ public class SchedulerConfiguration {
   }
 
   @Bean
-  public CronTriggerFactoryBean sampleJobSimpleTrigger(@Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
+  public CronTriggerFactoryBean sampleJobSimpleTrigger(
+    @Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
     CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
     factoryBean.setName("Simple trigger");
     factoryBean.setDescription("This is a simple trigger for demonstration purpose");
@@ -41,7 +42,8 @@ public class SchedulerConfiguration {
   }
 
   @Bean
-  public SimpleTriggerFactoryBean sampleJobCronTrigger(@Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
+  public SimpleTriggerFactoryBean sampleJobCronTrigger(
+    @Qualifier("sampleJobDetail") JobDetail sampleJobDetail) {
     SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
     factoryBean.setName("Cron trigger");
     factoryBean.setDescription("This is a cron trigger for demonstration purpose");
@@ -49,7 +51,8 @@ public class SchedulerConfiguration {
     factoryBean.setStartDelay((long) 30 * 1000);
     factoryBean.setRepeatInterval(1 * 60 * 60 * 1000);
     factoryBean.setRepeatCount(SimpleTrigger.REPEAT_INDEFINITELY);
-    factoryBean.setMisfireInstruction(SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT);
+    factoryBean.setMisfireInstruction(
+      SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT);
     return factoryBean;
   }
 
@@ -60,6 +63,7 @@ public class SchedulerConfiguration {
   @DisallowConcurrentExecution
   @PersistJobDataAfterExecution
   public static class SampleJob implements Job {
+
     private final Logger LOGGER = LoggerFactory.getLogger(SampleJob.class);
 
     @Override

@@ -9,6 +9,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 
 public class EchoSocketHandler extends TextWebSocketHandler {
+
   private static Logger logger = LoggerFactory.getLogger(EchoSocketHandler.class);
 
   @Override
