@@ -3,7 +3,10 @@ jdk:
 - oraclejdk8
 sudo: false
 before_install:
-  - git clone https://github.com/blossom-project/blossom.git ~/builds/blossom
-  - pushd ~/builds/blossom
-  - mvn clean install
-  - popd
+- git clone https://github.com/blossom-project/blossom.git ~/builds/blossom
+- pushd ~/builds/blossom
+- mvn clean install
+- popd
+notifications:
+  slack:
+    secure: NI/+zaZpDIMGxXb4SQVI4uou/xjdc55f9fVB5st9GZCYIgovexBOeQwgTo5xUYIwdl7U/WcA7ZDejiULa9Jl0DNoQiGgC3uGaNdbN21tGub7oQet5dLky9loYponGztNSDSLPWxfD1OgR8/0UwK+A5O/lBfA4zR4WU5MqTDrxZ14wMU2/SUksr0vJHMwbmuW2uwxO4C5MDF6waAUaTkzVQWb0h0F42C8dwsLOIaN09uCLwl2UOA5YHtQypGd5BRAioqUnRtg5eqBgvjJeF16vxQzrisiKAWUQwITh8oLiHOe7/PRDbVGKhXRprQfoY1k+8GnqAImFaoutYl7KeH3ogZXEwtuTUQK63fjU7kEZ8jQtlVj/1INhFJN4PlIC8+5fPD3MwzAfy4/huLsi4Q6BOp4WxCX+nPwSLFUVAQ2scPvIZCFJAd570/D5Nu8uW2pl6nxedVzTmg5opIvgd2dLcINEr3rSDDltLKjXnHzxxCV7/VT5M9AkQ3fCFGzQtTBesErD5kj8norpbYIy10m0Jz8axVhOUz/MiHyA8xxJLFXl+t9zadEtbLn80qDNyUdw/4q95+lloy/l3cGNsW9ol1vHTG9+54e4XKi/TX/YABQ65k8OvoiSsG+HAdIud7OyCvZXjrOzfd9pYn1a/fWwvZ0JGhw7dY7XHs6+uGm4/4=
