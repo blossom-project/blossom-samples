@@ -18,7 +18,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <start.class>com.blossom-project.sample.Application</start.class>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <springboot.version>2.0.0.RC1</springboot.version>
+    <springboot.version>2.0.0.RC2</springboot.version>
   </properties>
   <dependencyManagement>
     <dependencies>
