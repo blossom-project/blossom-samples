@@ -37,11 +37,25 @@ public class Application {
     return themeBuilder
       .name("Orange")
       .scss()
-      .additionnalScss("h1, h2, h3, h4, h5{text-decoration:underline;}")
       .variables()
       ._primary("orange")
       ._warning("peru")
       ._navHeaderBg("url('/bg-orange.jpg') no-repeat")
+      .done().done()
+      .bodyClass("md-skin")
+      .logo("/blossom/public/img/blossom-flower.svg")
+      .build();
+  }
+
+  @Bean
+  public Theme blueTheme(ThemeBuilder themeBuilder) {
+    return themeBuilder
+      .name("Blue")
+      .scss()
+      .additionnalScss("h1, h2, h3, h4, h5{font-decoration:underline;}")
+      .variables()
+      ._primary("#033372")
+      ._navHeaderBg("url('/bg-blue.jpg') no-repeat")
       .done().done()
       .bodyClass("md-skin")
       .logo("/blossom/public/img/blossom-flower.svg")
