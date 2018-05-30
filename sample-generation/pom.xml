@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>blossom-samples</artifactId>
+    <groupId>com.blossom-project.sample</groupId>
+    <version>1.1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>sample-generation</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>sample-generation-generators</module>
+    <module>sample-generation-application</module>
+  </modules>
+
+  <properties>
+    <blossom.version>1.1.0-SNAPSHOT</blossom.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.blossom-project</groupId>
+        <artifactId>blossom-parent</artifactId>
+        <version>${blossom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+</project>
