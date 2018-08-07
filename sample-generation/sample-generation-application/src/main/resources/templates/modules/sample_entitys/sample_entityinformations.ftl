@@ -38,13 +38,6 @@
       </div>
     </div>
       
-    <div class="form-group">
-      <label class="col-sm-2 control-label"><@spring.message "sample_entitys.sample_entity.properties.blobField"/></label>
-      <div class="col-sm-10">
-        <#--<p class="form-control-static"><#if sample_entity.blobField??>${sample_entity.blobField}</#if></p>-->
-      </div>
-    </div>
-      
       <div class="form-group">
           <label class="col-sm-2 control-label">booleanField</label>
           <div class="col-sm-10">

@@ -17,13 +17,13 @@
 	<constraints nullable="false"/>
 </column><column name="bigdecimalfield" type="decimal(5,5)">
 	<constraints nullable="false"/>
-</column><column name="blobfield" type="blob">
+</column><column name="blobfield" type="longblob">
 	<constraints nullable="false"/>
 </column><column name="booleanfield" type="boolean">
 	<constraints nullable="false"/>
 </column><column name="datefield" type="timestamp">
 	<constraints nullable="false"/>
-</column><column name="enumfield" type="varchar">
+</column><column name="enumfield" type="varchar(6)">
 	<constraints nullable="false"/>
 </column><column name="integerfield" type="integer">
 	<constraints nullable="false"/>

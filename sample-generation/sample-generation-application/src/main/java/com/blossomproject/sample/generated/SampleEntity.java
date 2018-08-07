@@ -32,7 +32,7 @@ public class SampleEntity
     @Column(name = "datefield")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateField;
-    @Column(name = "enumfield")
+    @Column(name = "enumfield", length = 6)
     @Enumerated(EnumType.STRING)
     private EnumFieldValues enumField;
     @Column(name = "integerfield")
