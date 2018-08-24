@@ -32,6 +32,7 @@
     <module>sample-websocket</module>
     <module>sample-theme</module>
     <module>sample-complete</module>
+    <module>sample-generation</module>
   </modules>
 
 </project>
